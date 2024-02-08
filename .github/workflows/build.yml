@@ -18,7 +18,6 @@ jobs:
         with:
           context: .
           tags: ghcr.io/andrejvysny/react-template
-          push: true
           target: production
           file: ./.docker/Dockerfile
         secrets:
