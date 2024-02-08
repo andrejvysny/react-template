@@ -10,6 +10,8 @@ for i in $(env | grep VITE_)
 do
     key=$(echo $i | cut -d '=' -f 1)
     value=$(echo $i | cut -d '=' -f 2-)
+
+    # TODO: add support for strings with all characters - go over lines, make sure '"' are there for strings
     echo "$key: $value," >> ./runtime-env.js
 
 done

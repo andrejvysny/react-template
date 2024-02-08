@@ -1,5 +1,3 @@
-
-
 version: "3.9"
 
 services:
@@ -12,4 +10,9 @@ services:
     ports:
       - 80:80
 
-
+  preview: 
+    image: ghcr.io/andrejvysny/react-template:latest
+    ports:
+      - 80:80
+    environment:
+      - VITE_TITLE="value"
