@@ -19,6 +19,6 @@ jobs:
           context: .
           tags: ghcr.io/andrejvysny/react-template
           target: production
-          file: ./.docker/Dockerfile
+          dockerfile: ./.docker/Dockerfile
         secrets:
           access_token: ${{ secrets.GITHUB_TOKEN }}
