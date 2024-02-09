@@ -38,8 +38,6 @@ export const AuthProvider: FunctionComponent<AuthProviderProps> = ({ children })
     };
 
     const isLoggedIn: boolean = user !== null;
-
-
     const value: AuthContextType = { isLoggedIn, user, login };
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
