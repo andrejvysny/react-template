@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import HomeView from './views/HomeView';
 import NotFound from './views/NotFound';
+import {AuthProvider} from "./providers/AuthProvider.tsx";
 function App() {
 
   const router = createBrowserRouter(
@@ -19,7 +20,9 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router} />
+        <AuthProvider>
+            <RouterProvider router={router} />
+        </AuthProvider>
     </>
   )
 }
