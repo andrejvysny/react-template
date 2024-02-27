@@ -17,5 +17,6 @@ jobs:
     with:
       server:  andrejvysny.sk
       username: react-template.andrejvysny.sk
+      folder-name: dist
     secrets:
       password: ${{ secrets.FTP_PASS }}
