@@ -8,15 +8,14 @@ on:
 
 jobs:
 
- # ci:
-  #  uses: ./.github/workflows/ci.yml
+  ci:
+    uses: ./.github/workflows/ci.yml
 
   deploy:
- #   needs: ci
+    needs: ci
     uses: andrejvysny/workflows/.github/workflows/deploy_react.yaml@main
     with:
       server:  andrejvysny.sk
       username: react-template.andrejvysny.sk
-      folder-name: dist
     secrets:
       password: ${{ secrets.FTP_PASS }}
