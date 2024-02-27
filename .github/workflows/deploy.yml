@@ -1,0 +1,13 @@
+
+on:
+  push:
+
+jobs:
+
+  build_and_push:
+    uses: andrejvysny/workflows/.github/workflows/deploy_react.yaml@main
+    with:
+      server:  andrejvysny.sk
+      username: react-template.andrejvysny.sk
+    secrets:
+      password: ${{ secrets.FTP_PASS }}
